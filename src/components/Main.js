@@ -1,4 +1,5 @@
 import React from "react"
+import { Trans } from 'react-i18next';
 
 import "../css/index.css"
 import 'bootstrap/dist/css/bootstrap.css';
@@ -24,7 +25,7 @@ const Main = () => (
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-3 icon-c">
                                     <div class="service-icon">
                                         <i class="fi flaticon-lawyer">
-                                            <img src={lawyer}></img>
+                                            <img src={lawyer} alt="lawyer"></img>
                                         </i>
                                     </div>
                                 </div>
@@ -43,7 +44,7 @@ const Main = () => (
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-3 icon-c">
                                     <div class="service-icon">
                                         <i class="fi flaticon-scale">
-                                            <img src={law}></img>
+                                            <img src={law} alt="law"></img>
                                         </i>
                                     </div>
                                 </div>
@@ -62,7 +63,7 @@ const Main = () => (
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-3 icon-c">
                                     <div class="service-icon">
                                         <i class="fi flaticon-network">
-                                            <img src={meeting}></img>
+                                            <img src={meeting} alt="meeting"></img>
                                         </i>
                                     </div>
                                 </div>
@@ -94,7 +95,7 @@ const Main = () => (
         <div class="col-l2">
             <div class="section-title text-center">
                 <span>Area Of Practice</span>
-                <h2>How Can We Help You</h2>
+                <h2><Trans i18nKey="HowCanWe">How Can We Help You</Trans></h2>
             </div>
         </div>
         <div class="row">
@@ -103,7 +104,7 @@ const Main = () => (
                     <div class="row">
                         <div class="service-icon">
                             <i class="fi flaticon-parents">
-                                <img className="MainIcons" src={employees}></img>
+                                <img className="MainIcons" src={employees} alt="employees"></img>
                             </i>
                         </div>
                   
@@ -119,7 +120,7 @@ const Main = () => (
                     <div class="row">
                         <div class="service-icon">
                             <i class="fi flaticon-wounded">
-                                <img className="MainIcons" src={accident}></img>
+                                <img className="MainIcons" src={accident} alt="accident"></img>
                             </i>
                         </div>
                         <div class="service-text">
@@ -134,7 +135,7 @@ const Main = () => (
                     <div class="row">
                         <div class="service-icon">
                             <i class="fi flaticon-employee">
-                                <img className="MainIcons" src={employee}></img>
+                                <img className="MainIcons" src={employee} alt="employee"></img>
                             </i>
                         </div>
                         <div class="service-text">
@@ -149,7 +150,7 @@ const Main = () => (
                     <div class="row">
                         <div class="service-icon">
                             <i class="fi flaticon-thief">
-                                <img className="MainIcons" src={thief}></img>
+                                <img className="MainIcons" src={thief} alt="thief"></img>
                             </i>
                         </div>
                         <div class="service-text">
@@ -164,7 +165,7 @@ const Main = () => (
                     <div class="row">
                         <div class="service-icon">
                             <i class="fi flaticon-university-graduate-hat">
-                                <img className="MainIcons" src={university}></img>
+                                <img className="MainIcons" src={university} alt="university"></img>
                             </i>
                         </div>
                         <div class="service-text">
@@ -179,7 +180,7 @@ const Main = () => (
                     <div class="row">
                         <div class="service-icon">
                             <i class="fi flaticon-house">
-                                <img className="MainIcons" src={home}></img>
+                                <img className="MainIcons" src={home} alt="home"></img>
                             </i>
                         </div>
                         <div class="service-text">

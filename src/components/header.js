@@ -1,22 +1,34 @@
-import React from "react"
+import React, {Component} from "react"
 import "../css/index.css"
 
 import 'bootstrap/dist/css/bootstrap.css';
 import background from "../images/background.jpg"
 import test from "../images/gatsby-icon.png"
+import ReactFlagsSelect from 'react-flags-select';
+import 'react-flags-select/css/react-flags-select.css';
 
 const sectionStyle = {
 	backgroundImage: `url(${background})`,
 	backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  minHeight: `600px`,
+    backgroundSize: "cover",
+    minHeight: `600px`,
 }
 
-const Header = () => (
-  <div className="header">
-      <section className="header-area" style={sectionStyle}>
-      <div className="container">
-      <header class="header-style-3">
+class Header extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+
+        };
+    }
+render(){
+
+    return(
+
+    <div className="header">
+        <section className="header-area" style={sectionStyle}>
+        <div className="container">
+        <header class="header-style-3">
             <div class="header-area header-area2 header-area-3">
                 <div class="header-shot">
                     <div class="container">
@@ -33,6 +45,8 @@ const Header = () => (
                                             <li><a ui-sref="aboutus" ui-sref-active="active" href="/aboutus" class="">O notário e a função notarial</a></li>
                                             <li><a ui-sref="services" ui-sref-active="active" href="/services">Serviços Prestados</a></li>
                                             <li><a ui-sref="contacts" ui-sref-active="active" href="/contacts">Contactos</a></li>
+                                            <li><ReactFlagsSelect className="flags" defaultCountry="PT" countries={["ES", "GB", "FR", "PT"]} showSelectedLabel={false} showOptionLabel={false}/>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -50,9 +64,16 @@ const Header = () => (
                                         </a>
                                         <nav class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu">
                                             <ul>
-                                                <li><a ui-sref="aboutus" ui-sref-active="active" href="#!/aboutus" class="">O notário e a função notarial</a></li>
-                                                <li><a ui-sref="services" ui-sref-active="active" href="#!/services">Serviços Prestados</a></li>
-                                                <li><a ui-sref="contacts" ui-sref-active="active" href="#!/contacts">Contactos</a></li>
+                                                <li><a ui-sref="aboutus" ui-sref-active="active" href="/aboutus" class="">O notário e a função notarial</a></li>
+                                                <li><a ui-sref="services" ui-sref-active="active" href="/services">Serviços Prestados</a></li>
+                                                <li><a ui-sref="contacts" ui-sref-active="active" href="/contacts">Contactos</a></li>
+                                                <li>
+                                            <ReactFlagsSelect className="flags"
+                                        defaultCountry="PT"
+                                        countries={["ES", "GB", "FR", "PT"]}
+                                        showSelectedLabel={false}
+                                        showOptionLabel={false}
+                                    /></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -67,6 +88,8 @@ const Header = () => (
       </section>
 
       </div>
-)
+);
+}
+}
 
-export default Header
+export default Header;

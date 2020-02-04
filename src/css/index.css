@@ -3438,3 +3438,6 @@ pealoader css
 .MainIcons{
     width:100px;
 }
+.flags{
+    margin-top: 4px;
+}
