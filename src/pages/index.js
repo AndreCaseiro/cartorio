@@ -1,4 +1,7 @@
 import React from "react"
+import ReactDOM from 'react-dom';
+import { Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import SEO from "../components/seo"
 import Header from "../components/header"
@@ -15,5 +18,6 @@ const IndexPage = () => (
       <Footer></Footer>
     </div>
 )
+
 
 export default IndexPage
