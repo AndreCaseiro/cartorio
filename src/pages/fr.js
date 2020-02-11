@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-const IndexPage = () => (
+const fr = () => (
   <Router>
   <div className="CartorioGustavoPinto">
     <Header/>
@@ -19,4 +19,4 @@ const IndexPage = () => (
     </Router>
 )
 
-export default IndexPage
+export default fr

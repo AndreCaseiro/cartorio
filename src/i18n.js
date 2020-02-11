@@ -10,21 +10,25 @@ i18n
             pt:{
                 translations: {
                     "HowCanWe": "HowCanwe PT",
+                    "Aboutus": "O Notário",
                 }
             },
             es:{
                 translations:{
                     "HowCanWe": "HowCanWe ES",
+                    "Aboutus": "O Notário ES",
                 }
             },
             fr:{
                 translations:{
                     "HowCanWe": "HowCanWe FR",
+                    "Aboutus": "O Notário FR",
                 }
             },
             gb:{
                 translations:{
-                    "HowCanWe": "HowCanWe FR",
+                    "HowCanWe": "HowCanWe FR ",
+                    "Aboutus": "O Notário GB",
                 }
             }
         },

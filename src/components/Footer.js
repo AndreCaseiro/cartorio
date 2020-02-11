@@ -5,19 +5,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Footer = () => (
 
-    <div class="footer-area">
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="footer-bottom-content">
-                        <div class="row">
-                            <div class="col-lg-6 col-12">
+    <div className="footer-area">
+            <div className="footer-bottom">
+                <div className="container">
+                    <div className="footer-bottom-content">
+                        <div className="row">
+                            <div className="col-lg-6 col-12">
                                 <span>Copyright © 2020 Cartório Gustavo Pinto</span>
                             </div>
-                            <div class="col-lg-6 col-12">
-                                <ul class="d-flex">
-                                    <li><a href="/#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="/#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="/#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <div className="col-lg-6 col-12">
+                                <ul className="d-flex">
+                                    <li><a href="/#"><i className="fa fa-facebook" ></i></a></li>
+                                    <li><a href="/#"><i className="fa fa-twitter" ></i></a></li>
+                                    <li><a href="/#"><i className="fa fa-linkedin" ></i></a></li>
                                 </ul>
                             </div>
                         </div>

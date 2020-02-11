@@ -2,15 +2,6 @@ import React from "react"
 
 import "../css/index.css"
 import 'bootstrap/dist/css/bootstrap.css';
-import lawyer from "../images/lawyer.png";
-import law from "../images/law.png";
-import meeting from "../images/meeting.png";
-import accident from "../images/accident.png";
-import employee from "../images/employee.png";
-import employees from "../images/employees.png";
-import home from "../images/home.png";
-import thief from "../images/thief.png";
-import university from "../images/university.png";
 
 const MainAboutus = () => (
 
