@@ -243,7 +243,9 @@ header-style
 
 .logo {
     margin-top: 15px;
+    margin-bot:10px;
 }
+
 
 .main-menu .submenu li a {
     padding: 10px 15px;

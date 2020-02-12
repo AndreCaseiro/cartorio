@@ -12,6 +12,7 @@ import 'react-flags-select/css/react-flags-select.css';
 
 import { withTranslation, Trans } from 'react-i18next';
 import "./../i18n";
+import aboutus from "../pages/pt/aboutus";
 
 
 
@@ -30,7 +31,7 @@ class Header extends Component{
     changeCountry = (lang) => {
         console.log(lang.toLowerCase());
         this.props.i18n.changeLanguage(lang.toLowerCase());
-        this.props.history.replace('/'+lang.toLowerCase()+this.props.location.pathname.substring(3));   
+        this.props.history.replace('/'+lang.toLowerCase()+this.props.location.pathname.substring(3));
         window.location.reload();
     }
 
@@ -49,15 +50,15 @@ render(){
                         <div className="row">
                             <div className="col-lg-3 col-md-10 col-sm-10 col-8 text-center">
                                 <div className="logo">
-                                    <a ui-sref="main" href="/"><img src={logo} alt="" width="25%"></img></a>
+                                    <a ui-sref="main" href="/"><img src={logo} alt="logo" width="100px"></img></a>
                                 </div>
                             </div>
                                 <div className="main-menu">
                                     <nav className="nav_mobile_menu">
                                         <ul>
-                                            <li><a ui-sref="aboutus" ui-sref-active="active" href="/aboutus" className=""><Trans i18nKey="Aboutus">O notário e a função notarial</Trans></a></li>
-                                            <li><a ui-sref="services" ui-sref-active="active" href="/services">Serviços Prestados</a></li>
-                                            <li><a ui-sref="contacts" ui-sref-active="active" href="/contacts">Contactos</a></li>
+                                            <li><a ui-sref="aboutus" ui-sref-active="active" href={`/${route}/aboutus`} className=""><Trans i18nKey="Aboutus">O notário e a função notarial</Trans></a></li>
+                                            <li><a ui-sref="services" ui-sref-active="active" href={`/${route}/services`}><Trans i18nKey="services">Serviços Prestados</Trans></a></li>
+                                            <li><a ui-sref="contacts" ui-sref-active="active" href={`/${route}/contacts`}><Trans i18nKey="contacts">Contactos</Trans></a></li>
                                             <li><ReactFlagsSelect className="flags" defaultCountry={route.toUpperCase()} countries={["ES", "GB", "FR", "PT"]} showSelectedLabel={false} showOptionLabel={false} onSelect={(lang) => this.changeCountry(lang)} />
                                             </li>
                                         </ul>
@@ -66,7 +67,6 @@ render(){
                             <div className="col-12 d-block d-lg-none">
                                 <div className="mobile_menu">
                                     <div className="slicknav_menu">
-
                                         <a href="/" aria-haspopup="true" role="button" tabIndex="0" className="slicknav_btn slicknav_collapsed">
                                             <span className="slicknav_menutxt">MENU</span>
                                             <span className="slicknav_icon">

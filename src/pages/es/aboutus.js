@@ -1,14 +1,14 @@
 import React from "react"
 
-import SEO from "../components/seo"
-import Header from "../components/header"
-import Main from "../components/Main"
-import Footer from "../components/Footer"
+import SEO from "../../components/seo"
+import Header from "../../components/header"
+import Main from "../../components/Main"
+import Footer from "../../components/Footer"
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-const services = () => (
+const aboutus = () => (
   <Router>
   <div className="CartorioGustavoPinto">
     <Header/>
@@ -19,4 +19,4 @@ const services = () => (
     </Router>
 )
 
-export default services
+export default aboutus
