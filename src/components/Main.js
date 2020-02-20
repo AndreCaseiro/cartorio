@@ -3,15 +3,7 @@ import { Trans } from 'react-i18next';
 
 import "../css/index.css"
 import 'bootstrap/dist/css/bootstrap.css';
-import lawyer from "../images/lawyer.png";
-import law from "../images/law.png";
-import meeting from "../images/meeting.png";
-import accident from "../images/accident.png";
-import employee from "../images/employee.png";
-import employees from "../images/employees.png";
-import home from "../images/home.png";
-import thief from "../images/thief.png";
-import university from "../images/university.png";
+import '../css/flaticon.css';
 
 const Main = () => (
 
@@ -24,15 +16,14 @@ const Main = () => (
                             <div className="row">
                                 <div className="col-lg-3 col-md-3 col-sm-3 col-3 icon-c">
                                     <div className="service-icon">
-                                        <i className="fi flaticon-lawyer">
-                                            <img src={lawyer} alt="lawyer"></img>
+                                        <i className="fi flaticon-lawyer" alt="lawyer">
                                         </i>
                                     </div>
                                 </div>
                                 <div className="col-lg-9 col-md-9 col-sm-9 col-9">
                                     <div className="service-text">
-                                        <span>Book Your</span>
-                                        <h3>Appointment</h3>
+                                        <span>Marque a sua</span>
+                                        <h3>Consulta!</h3>
                                     </div>
                                 </div>
                             </div>
@@ -43,15 +34,14 @@ const Main = () => (
                             <div className="row">
                                 <div className="col-lg-3 col-md-3 col-sm-3 col-3 icon-c">
                                     <div className="service-icon">
-                                        <i className="fi flaticon-scale">
-                                            <img src={law} alt="law"></img>
+                                        <i className="fi flaticon-scale" alt="law">
                                         </i>
                                     </div>
                                 </div>
                                 <div className="col-lg-9 col-md-9 col-sm-9 col-9">
                                     <div className="service-text">
-                                        <span>Get Free</span>
-                                        <h3>Expert Advice</h3>
+                                        <span>Obtenha aconselhamento</span>
+                                        <h3>Especializado!</h3>
                                     </div>
                                 </div>
                             </div>
@@ -62,15 +52,14 @@ const Main = () => (
                             <div className="row">
                                 <div className="col-lg-3 col-md-3 col-sm-3 col-3 icon-c">
                                     <div className="service-icon">
-                                        <i className="fi flaticon-network">
-                                            <img src={meeting} alt="meeting"></img>
+                                        <i className="fi flaticon-network" alt="meeting">
                                         </i>
                                     </div>
                                 </div>
                                 <div className="col-lg-9 col-md-9 col-sm-9 col-9">
                                     <div className="service-text">
-                                        <span>You Can Easily</span>
-                                        <h3>Join Our Team</h3>
+                                        <span>Conheça</span>
+                                        <h3>A Nossa equipa!</h3>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +83,7 @@ const Main = () => (
     <div className="container">
         <div className="col-l2">
             <div className="section-title text-center">
-                <span>Area Of Practice</span>
+                <span>Área de serviços</span>
                 <h2><Trans i18nKey="HowCanWe">How Can We Help You</Trans></h2>
             </div>
         </div>
@@ -103,13 +92,12 @@ const Main = () => (
                 <div className="service-item">
                     <div className="row">
                         <div className="service-icon">
-                            <i className="fi flaticon-parents">
-                                <img className="MainIcons" src={employees} alt="employees"></img>
+                            <i className="fi flaticon-parents" alt="employees">
                             </i>
                         </div>
                   
                         <div className="service-text">
-                            <h3>Join Our Team</h3>
+                            <h3>Entre na nossa equipa!</h3>
                             <p>There are many variations of passages of Lorem</p>
                         </div>
                     </div>
@@ -119,12 +107,11 @@ const Main = () => (
                 <div className="service-item">
                     <div className="row">
                         <div className="service-icon">
-                            <i className="fi flaticon-wounded">
-                                <img className="MainIcons" src={accident} alt="accident"></img>
+                            <i className="fi flaticon-wounded" alt="accident">
                             </i>
                         </div>
                         <div className="service-text">
-                            <h3>Personal Injury</h3>
+                            <h3>Acidente com Lesão pessoal</h3>
                             <p>There are many variations of passages of Lorem</p>
                         </div>
                     </div>
@@ -134,12 +121,11 @@ const Main = () => (
                 <div className="service-item">
                     <div className="row">
                         <div className="service-icon">
-                            <i className="fi flaticon-employee">
-                                <img className="MainIcons" src={employee} alt="employee"></img>
+                            <i className="fi flaticon-employee" alt="employee">
                             </i>
                         </div>
                         <div className="service-text">
-                            <h3>Business Law</h3>
+                            <h3>Direitos empresariais</h3>
                             <p>There are many variations of passages of Lorem</p>
                         </div>
                     </div>
@@ -149,12 +135,11 @@ const Main = () => (
                 <div className="service-item">
                     <div className="row">
                         <div className="service-icon">
-                            <i className="fi flaticon-thief">
-                                <img className="MainIcons" src={thief} alt="thief"></img>
+                            <i className="fi flaticon-thief" alt="thief">
                             </i>
                         </div>
                         <div className="service-text">
-                            <h3>Criminal Law</h3>
+                            <h3>Lei Criminal</h3>
                             <p>There are many variations of passages of Lorem</p>
                         </div>
                     </div>
@@ -164,12 +149,11 @@ const Main = () => (
                 <div className="service-item">
                     <div className="row">
                         <div className="service-icon">
-                            <i className="fi flaticon-university-graduate-hat">
-                                <img className="MainIcons" src={university} alt="university"></img>
+                            <i className="fi flaticon-university-graduate-hat" alt="university">
                             </i>
                         </div>
                         <div className="service-text">
-                            <h3>Education Law</h3>
+                            <h3>Lei da Educação</h3>
                             <p>There are many variations of passages of Lorem</p>
                         </div>
                     </div>
@@ -179,12 +163,11 @@ const Main = () => (
                 <div className="service-item">
                     <div className="row">
                         <div className="service-icon">
-                            <i className="fi flaticon-house">
-                                <img className="MainIcons" src={home} alt="home"></img>
+                            <i className="fi flaticon-house" alt="home">
                             </i>
                         </div>
                         <div className="service-text">
-                            <h3>Real Estate Law</h3>
+                            <h3>Direito imobiliário</h3>
                             <p>There are many variations of passages of Lorem</p>
                         </div>
                     </div>

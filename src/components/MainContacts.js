@@ -1,72 +1,107 @@
-import React from "react"
+import React, { Component } from 'react';
 
 import "../css/index.css"
 import 'bootstrap/dist/css/bootstrap.css';
+import { Form } from 'reactstrap'
 
-const Maincontacts = () => (
+const axios = require('axios').default;
 
+class Maincontacts extends Component {
+    state = {
+        name: '',
+        email: '',
+        text: '',
+    }
+
+    resetForm(){
+        this.setState({
+            name: '',
+            email: '',
+            text: '',
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault()
+        if(this.state != null){
+            axios.post('http://admin.quintaisdocaneiro.com/api/gets.php?act=contactoCartorio&name='+this.state.name + '&text=' +this.state.text + '&email=' +this.state.email)
+            .then((response) => {
+                console.log(response)
+            })
+        }
+        this.resetForm()
+    }
+
+    handleChange = (param, e) => {
+        this.setState({ [param]: e.target.value })
+    }
+
+    render(){
+
+        return(
     <div className="Main">
-            <div class="contact-page-area section-padding">
-   <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-12">
-                <div class="contact-page-item">
-                    <h2>Our Contacts</h2>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                    <div class="adress">
-                        <h3>Address</h3>
-                        <span>245 King Street, Touterie Victoria 8520 Australia</span>
+            <div className="contact-page-area section-padding">
+        <div className="container">
+        <div className="row">
+            <div className="col-lg-5 col-md-12">
+                <div className="contact-page-item">
+                    <h2>Contacto</h2>
+                    <p>Cartório Notarial de Gustavo Pessoa Pinto</p>
+                    <div className="adress">
+                        <h2>Morada</h2>
+                        <span>Avenida Biscarrosse,</span>
+                                <span>Número 11</span>
+                                <span>3100-490 Pombal</span>
                     </div>
-                    <div class="phone">
-                        <h3>Phone</h3>
-                        <span>0-123-456-7890</span>
-                        <span>0-123-456-7890</span>
+                    <div className="phone">
+                        <h2>Telefone</h2>
+                        <span>Tel. 236 024 931</span>
+                        <span>Fax. 236 023 342</span>
                     </div>
-                    <div class="email">
-                        <h3>Email</h3>
-                        <span>sample@gmail.com</span>
+                    <div className="email">
+                        <h2>Email</h2>
+                        <span>gustavo.pinto@notarios.pt</span>
+                    </div>
+                    <div className="Horário">
+                        <h2>Horário</h2>
+                        <p>Dias Úteis</p>
+                        <span>09h00m - 17h00m</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-12">
-                <div class="contact-area contact-area-2 contact-area-3">
-                    <h2>Quick Contact Form</h2>
-                    <div class="contact-form">
-                        <form method="post" class="contact-validation-active ng-pristine ng-valid" id="contact-form">
-                            <div class="half-col">
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name"></input>
+            <div className="col-lg-7 col-md-12">
+                <div className="contact-area contact-area-2 contact-area-3">
+                    <h2>Contacte-nos !</h2>
+                    <div className="contact-form">
+                        <Form encType="text/plain" className="contact-validation-active ng-pristine ng-valid" id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
+                            <div className="half-col">
+                                <input type="text" name="name" id="name" className="form-control" placeholder="Nome *" required value={this.state.name} onChange={this.handleChange.bind(this, 'name')}></input>
                             </div>
-                            <div class="half-col">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email"></input>
-                            </div>
-                            <div class="half-col">
-                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone"></input>
-                            </div>
-                            <div class="half-col">
-                                <input type="text" name="address" id="address" class="form-control" placeholder="Address"></input>
+                            <div className="half-col">
+                                <input type="email" name="email" id="email" className="form-control" placeholder="Email *" required value={this.state.email} onChange={this.handleChange.bind(this, 'email')}></input>
                             </div>
                             <div>
-                                <textarea class="form-control" name="note" id="note" placeholder="Case Description..."></textarea>
+                                <textarea className="form-control" name="note" id="note" placeholder="Descriçao *" required value={this.state.text} onChange={this.handleChange.bind(this, 'text')}></textarea>
                             </div>
-                            <div class="submit-btn-wrapper">
-                                <button type="submit" class="theme-btn-s3">Appointment</button>
+                            <div className="submit-btn-wrapper">
+                                <button type="submit" className="theme-btn-s3">Submeter</button>
                                 <div id="loader">
-                                    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                                    <i className="fa fa-refresh fa-spin fa-3x fa-fw"></i>
                                 </div>
                             </div>
-                            <div class="clearfix error-handling-messages">
-                                <div id="success">Thank you</div>
-                                <div id="error"> Error occurred while sending email. Please try again later. </div>
+                            <div className="clearfix error-handling-messages">
+                                <div id="success">Obrigado por nos contactar!</div>
+                                <div id="error"> Ocorreu um erro ao enviar o email! Por favor tente denovo. </div>
                             </div>
-                        </form>
+                        </Form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col col-xs-12">
-                <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57763.58882182253!2d55.38442113562169!3d25.195692423227655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z4Kam4KeB4Kas4Ka-4KaHIC0g4Kam4KeB4Kas4Ka-4KaHIOCmhuCmruCmv-CmsOCmvuCmpCAtIOCmuOCmguCmr-CngeCmleCnjeCmpCDgpobgprDgpqwg4KaG4Kau4Ka_4Kaw4Ka-4Kak!5e0!3m2!1sbn!2sbd!4v1540725271741" allowfullscreen="" title="Hello"></iframe>
+        <div className="row">
+            <div className="col col-xs-12">
+                <div className="contact-map">
+                    <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:EilBdi4gZGUgQmlzY2Fycm9zc2UsIDMxMDAgUG9tYmFsLCBQb3J0dWdhbCIuKiwKFAoSCa8t04NvZiINEQ_7igghrlKLEhQKEgnTC9Zp1GUiDREuC7qC0sT3Xg&key=AIzaSyDqZGos_v7OO_oSNFnEq9PcZ5CllVXIoOo" allowFullScreen="" title="Cartório Location"></iframe>
                 </div>
             </div>
         </div>
@@ -74,5 +109,7 @@ const Maincontacts = () => (
 </div>
        </div>
 )
+}
+}
 
 export default Maincontacts

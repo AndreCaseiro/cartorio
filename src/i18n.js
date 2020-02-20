@@ -9,7 +9,7 @@ i18n
         resources: {
             pt:{
                 translations: {
-                    "HowCanWe": "HowCanwe PT",
+                    "HowCanWe": "TRADUÇAO PT",
                     "Aboutus": "O notário e a função notarial",
                 }
             },
